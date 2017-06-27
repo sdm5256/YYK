@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>yyk</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/common.css" media="all">
+		<link rel="stylesheet" href="css/yyjy_zjxz.css" media="all">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/carousel.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="header-container">
+				<div class="header-logo">
+					<img src="imgs/logo.png" />
+				</div>
+				<div class="header-search">
+					<input type="text" name="" id="" value="" class="left" />
+					<span class="search left">搜索</span>
+					<span class="hight-search left">高级搜索</span>
+				</div>
+				<div class="header-nav">
+					<ul class="layui-nav" lay-filter="">
+						<li class="layui-nav-item layui-this">
+							<a href="">首页</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="">国别与区域语言概况</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="">语言政策文本</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">语言政策研究</a>
+							<dl class="layui-nav-child">
+								<!-- 二级菜单 -->
+								<dd>
+									<a href="">移动模块</a>
+								</dd>
+								<dd>
+									<a href="">后台模版</a>
+								</dd>
+								<dd>
+									<a href="">电商平台</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="">语言教育</a>
+						</li>
+						<!--<li class="login right">
+							<a>gggg</a><span>|</span>
+							<a>注销</a>
+						</li>-->
+						<li class="login right entry"><a>登录</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="mask-search">
+			<div class="search-term">
+				<form class="layui-form" action="">
+					<!--描述： 条件1 -->
+					<div class="layui-form-item">
+						<label id="add-select" class="layui-form-label add-icon"></label>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">全文</option>
+								<option value="2">标题</option>
+								<option value="3">关键字</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">与</option>
+								<option value="2">或</option>
+								<option value="3">非</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<!--描述： 条件2-->
+					<div id="add-select1" class="layui-form-item slect-hide">
+						<label class="layui-form-label add-icon dec-icon" data-id="1"></label>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">全文</option>
+								<option value="2">标题</option>
+								<option value="3">关键字</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">与</option>
+								<option value="2">或</option>
+								<option value="3">非</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<!--描述： 条件3-->
+					<div id="add-select2" class="layui-form-item slect-hide">
+						<label class="layui-form-label add-icon dec-icon" data-id="2"></label>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">全文</option>
+								<option value="2">标题</option>
+								<option value="3">关键字</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">与</option>
+								<option value="2">或</option>
+								<option value="3">非</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label id="selet-date" class="layui-form-label add-icon select-icon"></label>
+						<div class="layui-form-mid layui-word-aux select-text">出版日期</div>
+						<div class="layui-input-inline select-date">
+							<input class="layui-input" placeholder="开始日期" onclick="layui.laydate({elem: this, max: laydate.now()})"><i></i>
+						</div>
+						<div class="layui-form-mid layui-word-aux select-text">至</div>
+						<div class="layui-input-inline select-date">
+							<input class="layui-input" placeholder="截止日期" onclick="layui.laydate({elem: this,  max: laydate.now()})">
+							<i></i>
+						</div>
+					</div>
+					<div class="layui-form-item search-submit">
+						<div class="layui-input-block">
+							<button id="searchRrsult" type="button" class="layui-btn btn-submit">检索</button>
+							<button type="reset" class="layui-btn btn-cancel">取消</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="mask-login">
+			<div class="sign-in">
+				<div class="title">会员登录</div>
+				<ul>
+					<li><input type="text" placeholder="账号或用户名"></li>
+					<li><input type="password" placeholder="密码"></li>
+					<li><input type="text" placeholder="验证码"> <img src="imgs/code.png"/></li>
+					<li class="login-in"><button type="button">登录</button></li>
+				</ul>
+				
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-content">
+				<div class="location">
+					当前位置：
+					<span class="layui-breadcrumb">
+					  	<a href="">首页</a><a href="">学者</a><a href="">黎明</a>
+					</span>
+				</div>
+				<div class="layui-clear">
+					<div class="introduction">
+						<img class="left" src="imgs/author.png" />
+						<div class="msg left">
+							<h5>黎明</h5>
+							<p>研究领域：语言学理论、现代汉语、心理语言学和语言规划</p>
+						</div>
+					</div>
+					<div class="detail">
+						<div class="detail-title"><i></i>人物简介</div>
+						<p class="section">陈章太（1932～），1955年毕业于厦门大学中文系。1956年到中国科学院语言研究所（1977年后改属中国社会科学院）从事语言研究和语文编辑工作，历任研究实习员、助理研究员、副研究员、副所长、《中国语文》杂志副主编。现任国家语言文字工作委员会咨询委员会委员、教育部语言文字应用研究所研究员，博士生导师。兼任中国社会科学院研究生院教授、中国传媒大学教授、中国应用语言学会会长。曾任国家语委常务副主任，国家语委语言文字应用研究所所长，日本国立一桥大学教授，香港理工大学客座研究员，中国语言学会副会长，中国地名学研究会副理事长，中国地名委员会副主任等职。陈章太到语言研究所工作以后，师从丁声树、李荣先生调查、研究汉语方言，参加调查河北昌黎方言，多次到福建调查闽方言。20世纪60年代初开始，一边协助主编丁声树编辑《中国语文》杂志，一边继续调查研究闽语。1976年以后，协助吕叔湘先生主编《中国语文》，并继续研究闽语。1983年调国家语委后，主持语委日常工作，负责筹建语言文字应用研究所，筹建中国社科院研究生院语用系，从这时开始研究社会语言学。为促进我国的语言研究和语言应用研究，陈章太积极参与筹备成立中国语言学会和中国应用语言学会，任中国语言学会第一任秘书长、中国应用语言学会第一任会长，并具体组织了几次全国性大型语言学、社会语言学学术研讨会。还具体负责筹办《中国语言学报》和《语言文字应用》两个学术刊物，开辟了发表语言及语言应用研究成果的新园地。</p>
+						<div class="detail-title"><i></i>主要著述与成果</div>
+						<p class="section">陈章太（1932～），1955年毕业于厦门大学中文系。1956年到中国科学院语言研究所（1977年后改属中国社会科学院）从事语言研究和语文编辑工作，历任研究实习员、助理研究员、副研究员、副所长、《中国语文》杂志副主编。现任国家语言文字工作委员会咨询委员会委员、教育部语言文字应用研究所研究员，博士生导师。兼任中国社会科学院研究生院教授、中国传媒大学教授、中国应用语言学会会长。曾任国家语委常务副主任，国家语委语言文字应用研究所所长，日本国立一桥大学教授，香港理工大学客座研究员，中国语言学会副会长，中国地名学研究会副理事长，中国地名委员会副主任等职。</p>
+						<p class="section">陈章太到语言研究所工作以后，师从丁声树、李荣先生调查、研究汉语方言，参加调查河北昌黎方言，多次到福建调查闽方言。20世纪60年代初开始，一边协助主编丁声树编辑《中国语文》杂志，一边继续调查研究闽语。1976年以后，协助吕叔湘先生主编《中国语文》，并继续研究闽语。1983年调国家语委后，主持语委日常工作，负责筹建语言文字应用研究所，筹建中国社科院研究生院语用系，从这时开始研究社会语言学。</p>
+						<div class="detail-title"><i></i>数据库专属资源</div>
+						<ul class="sql">
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+							<li><a>APEC区域语言教育与高端人才培养</a></li>
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+						</ul>
+						<div class="spread">
+							展开全部 V
+						</div>
+						<ul class="sql hide">
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+							<li><a>APEC区域语言教育与高端人才培养</a></li>
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+							<li><a>新加坡双语教育与英汉语用环境变迁</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="title">
+				<li>
+					<a href="">数据库简介</a>
+				</li>
+				<li>
+					<a href="">使用说明</a>
+				</li>
+				<li>
+					<a href="">关于我们</a>
+				</li>
+				<li>
+					<a href="">版权说明</a>
+				</li>
+			</ul>
+			<p>Copyright © 宁夏大学国际教育学院 All Rights Reserved<br>通讯地址：宁夏银川市西夏区文萃北街217号 宁夏大学国际教育学院</p>
+		</div>
+	</body>
+
+	<script src="layui/layui.js"></script>
+	<script>
+		
+		layui.use(['element', 'jquery', 'laypage', 'layer','form','laydate','upload'], function() {
+			var $ = layui.jquery,
+				laypage = layui.laypage,
+				layer = layui.layer,
+				laydate = layui.laydate,
+				form = layui.form(),
+				element = layui.element();
+				
+				//登陆
+				$('.header .entry').on('click',function(){
+					$('.mask-login').fadeIn();
+				})
+				//检索操作
+				$('.header .hight-search').on('click',function(){
+					$('.mask-search').show();
+				});
+				$('#add-select').on('click',function(e){
+					
+					if($($('.mask-search .slect-hide')[0]).css('display')=='none'){
+						$($('.mask-search .slect-hide')[0]).css('display','block');
+						return;
+					}
+					if($($('.mask-search .slect-hide')[1]).css('display')=='none'){
+						$($('.mask-search .slect-hide')[1]).css('display','block');
+						return;
+					}
+					
+				});
+				$('.mask-search .layui-form-item .dec-icon').bind('click',function(e){
+					var elemId = '#add-select' + $(e.target).attr('data-id');					
+					$(elemId).hide();
+				});
+				var dateType = false;
+				$('#selet-date').on('click',function(e){
+					if(dateType){
+						dateType = false;
+						$(e.target).removeClass('selected-icon').addClass('select-icon');
+					}else{
+						dateType = true;
+						$(e.target).removeClass('select-icon').addClass('selected-icon');
+					}
+				});
+				$('.mask-search .search-term .btn-cancel').on('click',function (){
+					$('.mask-search').hide();
+					$('#add-select1').hide();
+					$('#add-select2').hide();
+				});
+				//search表单提交监听
+				$('#searchRrsult').on('click',function(){
+					
+				});
+				//左侧导航栏
+				$('.main-content .nav-list .list-item>a').bind('click',function(e){
+					var elem = e.target;
+					$('.main-content .nav-list .list-item .active').removeClass('active');
+					$(elem).addClass('active');
+				});
+				//展开
+				$('.detail .spread').on('click',function(e){
+					var elem = e.target;
+					$(elem).hide();
+					$('.detail .hide').slideDown();
+				});
+		})
+	</script>
+
+</html>
