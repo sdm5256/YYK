@@ -206,7 +206,7 @@ h5 {
     height: 380px;
     border-radius: 5px;
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 15%;
     border: 1px solid #eeeeee; }
     .mask-login .sign-in .title {
       color: #666;
@@ -264,7 +264,7 @@ h5 {
     margin: 0 auto;
     /*主体内容 -- 左侧nav-list*/
     /*右侧内容*/
-    /*学者详情*/ }
+    /* 学者详情 */ }
     .main .main-content .location {
       padding: 0px 0px 10px 20px;
       position: relative; }
@@ -426,7 +426,8 @@ h5 {
       display: inline-block;
       background: #fff;
       width: 760px;
-      height: 890px; }
+      height: 890px;
+      /* 个人中心 */ }
       .main .main-content .list-content .content-title {
         position: relative;
         font-size: 18px;
@@ -459,7 +460,144 @@ h5 {
             color: #3875c2; }
         .main .main-content .list-content .author-list .actived {
           color: #3875c2; }
+      .main .main-content .list-content .personal-center {
+        padding: 10px;
+        padding-top: 0;
+        /* 修改密码 */
+        /** 我的收藏  **/ }
+        .main .main-content .list-content .personal-center .title {
+          font-size: 16px;
+          line-height: 50px;
+          padding-left: 20px;
+          border-bottom: 1px solid #e1e1e1; }
+          .main .main-content .list-content .personal-center .title > a {
+            margin-right: 20px;
+            cursor: pointer; }
+            .main .main-content .list-content .personal-center .title > a:hover {
+              color: #3875c2; }
+          .main .main-content .list-content .personal-center .title .hist-search {
+            margin-right: 20px; }
+            .main .main-content .list-content .personal-center .title .hist-search input {
+              display: inline-block;
+              width: 200px;
+              height: 28px;
+              line-height: 28px;
+              border-right: none; }
+            .main .main-content .list-content .personal-center .title .hist-search span {
+              display: inline-block;
+              width: 60px;
+              height: 28px;
+              line-height: 28px;
+              background: #3875c2;
+              color: #fff;
+              text-align: center;
+              cursor: pointer; }
+        .main .main-content .list-content .personal-center .msglist li {
+          line-height: 45px;
+          padding: 0px 20px;
+          border-bottom: 1px solid #e1e1e1; }
+          .main .main-content .list-content .personal-center .msglist li span {
+            display: inline-block; }
+          .main .main-content .list-content .personal-center .msglist li .name {
+            width: 140px; }
+          .main .main-content .list-content .personal-center .msglist li .adress {
+            max-width: 550px; }
+          .main .main-content .list-content .personal-center .msglist li .layui-input {
+            display: inline-block;
+            width: 180px;
+            height: 32px;
+            line-height: 32px; }
+          .main .main-content .list-content .personal-center .msglist li .adress2 {
+            width: 450px; }
+          .main .main-content .list-content .personal-center .msglist li .sex {
+            display: inline-block;
+            position: relative; }
+            .main .main-content .list-content .personal-center .msglist li .sex span {
+              padding-right: 30px; }
+            .main .main-content .list-content .personal-center .msglist li .sex input {
+              position: absolute;
+              top: 17px;
+              left: 25px;
+              z-index: 5; }
+            .main .main-content .list-content .personal-center .msglist li .sex .female {
+              left: 70px; }
+        .main .main-content .list-content .personal-center .msglist .handle {
+          border-bottom: none;
+          padding-top: 15px; }
+          .main .main-content .list-content .personal-center .msglist .handle button {
+            height: 33px;
+            line-height: 33px;
+            border: none;
+            padding: 0px 20px;
+            border-radius: 4px; }
+          .main .main-content .list-content .personal-center .msglist .handle .btn1 {
+            background: #3875c2; }
+          .main .main-content .list-content .personal-center .msglist .handle .btn2 {
+            background: #f5f5f5;
+            border: 1px solid #e6e6e6;
+            color: #666; }
+        .main .main-content .list-content .personal-center .password {
+          padding-top: 40px; }
+          .main .main-content .list-content .personal-center .password .layui-form-label {
+            width: 110px; }
+          .main .main-content .list-content .personal-center .password .name {
+            line-height: 38px; }
+          .main .main-content .list-content .personal-center .password .layui-word-aux {
+            color: red; }
+          .main .main-content .list-content .personal-center .password .pswd-btn {
+            margin: 40px 0px 0px 180px; }
+            .main .main-content .list-content .personal-center .password .pswd-btn button {
+              background: #3875c2;
+              padding: 0px 28px;
+              border-radius: 4px; }
+        .main .main-content .list-content .personal-center .collect .collect-rt {
+          width: 80%; }
+          .main .main-content .list-content .personal-center .collect .collect-rt .page {
+            text-align: center; }
+          .main .main-content .list-content .personal-center .collect .collect-rt .layui-table {
+            table-layout: fixed; }
+            .main .main-content .list-content .personal-center .collect .collect-rt .layui-table tr td {
+              text-overflow: ellipsis;
+              -moz-text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap; }
+            .main .main-content .list-content .personal-center .collect .collect-rt .layui-table tr .handle a:hover {
+              color: #3875c2;
+              cursor: pointer; }
+        .main .main-content .list-content .personal-center .history {
+          padding: 0px 20px; }
+          .main .main-content .list-content .personal-center .history .layui-form-pane {
+            padding-top: 20px; }
+            .main .main-content .list-content .personal-center .history .layui-form-pane .layui-input-inline {
+              position: relative; }
+              .main .main-content .list-content .personal-center .history .layui-form-pane .layui-input-inline i {
+                position: absolute;
+                top: 12px;
+                right: 5px;
+                z-index: 1000;
+                background: url(../imgs/date.png) no-repeat;
+                background-color: #fff;
+                width: 24px;
+                height: 24px; }
+            .main .main-content .list-content .personal-center .history .layui-form-pane .text {
+              margin-right: 10px;
+              line-height: 38px; }
+          .main .main-content .list-content .personal-center .history .page {
+            text-align: center; }
+          .main .main-content .list-content .personal-center .history .layui-table {
+            table-layout: fixed; }
+            .main .main-content .list-content .personal-center .history .layui-table tr td {
+              text-overflow: ellipsis;
+              -moz-text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap; }
+            .main .main-content .list-content .personal-center .history .layui-table tr .handle a:hover {
+              color: #3875c2;
+              cursor: pointer; }
+            .main .main-content .list-content .personal-center .history .layui-table tr .handle span {
+              padding: 0px 5px; }
     .main .main-content .introduction {
+      position: relative;
       background: #fff;
       height: 300px;
       padding: 20px; }
@@ -467,12 +605,17 @@ h5 {
         width: 190px;
         height: 260px; }
       .main .main-content .introduction .msg {
-        margin: 160px 0px 0px 25px; }
+        position: absolute;
+        bottom: 20px;
+        left: 240px;
+        z-index: 5; }
         .main .main-content .introduction .msg h5 {
           font-size: 24px;
           padding-bottom: 20px; }
         .main .main-content .introduction .msg p {
-          font-size: 16px; }
+          color: #666;
+          font-size: 16px;
+          line-height: 26px; }
     .main .main-content .detail {
       background: #fff;
       margin-top: 20px;
@@ -506,6 +649,8 @@ h5 {
         text-align: right;
         line-height: 26px;
         cursor: pointer; }
+        .main .main-content .detail .spread:hover {
+          color: #3875c2; }
 
 .main-bg {
   background: #f5f5f5; }

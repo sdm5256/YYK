@@ -271,7 +271,7 @@ h5 {
        height: 380px; 
        border-radius: 5px;
        margin: 0 auto;
-       margin-top: 20%;
+       margin-top: 15%;
        border: 1px solid #eeeeee;
        .title {
            color:#666;
@@ -582,10 +582,199 @@ h5 {
                     color: $bgcolor;
                 }
             }
+            /* 个人中心 */
+            .personal-center{
+                padding: 10px;
+                padding-top: 0;
+                .title {
+                    font-size: 16px;
+                    line-height: 50px;
+                    padding-left: 20px;
+                    border-bottom: 1px solid #e1e1e1;
+                    >a{
+                        margin-right: 20px;
+                        cursor: pointer;
+                        &:hover{
+                            color: $bgcolor;
+                        }
+                    }
+                    .hist-search{
+                        margin-right: 20px;
+                        input{
+                            display: inline-block;
+                            width: 200px;
+                            height: 28px;
+                            line-height: 28px;
+                            border-right: none;
+                        }
+                        span{
+                            display: inline-block;
+                            width: 60px;
+                            height: 28px;
+                            line-height: 28px;
+                            background: $bgcolor;
+                            color: #fff;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .msglist{
+                    li{
+                        line-height: 45px;
+                        padding: 0px 20px;
+                        border-bottom: 1px solid #e1e1e1;
+                        span{
+                            display: inline-block;
+                        }
+                        .name{
+                            width: 140px;
+                        }
+                        .adress{
+                            max-width: 550px;
+                        }
+                        
+                        .layui-input{
+                            display: inline-block;
+                            width: 180px;
+                            height: 32px;
+                            line-height: 32px;
+                        }
+                        .adress2{
+                            width: 450px;
+                        }
+                        .sex{
+                            display: inline-block; 
+                            position: relative; 
+                            span{
+                                padding-right: 30px;
+                            }
+                            input{
+                                @include position(top,17px,left,25px,5);
+                            }
+                            .female{
+                                left: 70px;
+                            }
+                        }
+                    }
+                    .handle{
+                        border-bottom: none;
+                        padding-top: 15px;
+                        
+                        button{
+                            height: 33px;
+                            line-height: 33px;
+                            border: none;
+                            padding: 0px 20px;
+                            border-radius: 4px;
+                        }
+                        .btn1{
+                            background: $bgcolor;
+                        }
+                        .btn2{
+                            background: #f5f5f5;
+                            border: 1px solid #e6e6e6;
+                            color: #666; 
+                        }
+                    }
+                }
+                /* 修改密码 */
+                .password{
+                    padding-top: 40px;
+                    .layui-form-label {
+                        width: 110px;
+                    }
+                    .name{
+                        line-height: 38px;
+                    }
+                    .layui-word-aux{
+                        color: red;
+                    }
+                    .pswd-btn {
+                        margin: 40px 0px 0px 180px;
+                        button{
+                            background: $bgcolor;
+                            padding: 0px 28px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+                /** 我的收藏  **/
+                .collect{
+                    .collect-rt{
+                        width: 80%;
+                        .page{
+                            text-align: center;
+                        }
+                        .layui-table{
+                            table-layout: fixed;
+                            tr{
+                                td{
+                                    text-overflow: ellipsis;
+                                    -moz-text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                }
+                                .handle{
+                                    a:hover{
+                                        color: $bgcolor;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .history{
+                    padding: 0px 20px;
+                    .layui-form-pane{
+                        padding-top: 20px;
+                        .layui-input-inline{
+                            position: relative;
+                            i{
+                                @include position(top,12px,right,5px,1000);
+                                background: url(../imgs/date.png) no-repeat;
+                                background-color: #fff;
+                                width: 24px;
+                                height: 24px;
+                            }
+                        }
+                        .text{
+                            margin-right: 10px;
+                            line-height: 38px;
+                        }
+                    }
+                    .page{
+                        text-align: center;
+                    }
+                    .layui-table{
+                        table-layout: fixed;
+                        
+                        tr{
+                            td{
+                                text-overflow: ellipsis;
+                                -moz-text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                            .handle{
+                                a:hover{
+                                    color: $bgcolor;
+                                    cursor: pointer;
+                                }
+                                span{
+                                    padding: 0px 5px;
+                                }
+                            } 
+                        }
+                    }
+                }
+            }
         }
-        /*学者详情*/
+        /* 学者详情 */
         .introduction {
             @extend .boxsizing;
+            position: relative;
             background: #fff;
             height: 300px;
             padding: 20px;
@@ -594,13 +783,15 @@ h5 {
                 height: 260px;
             }
             .msg {
-                margin: 160px 0px 0px 25px;
+                @include position(bottom,20px,left,240px,5);
                 h5{
                     font-size: 24px;
                     padding-bottom: 20px;
                 }
                 p{
+                    color: #666;
                     font-size: 16px;
+                    line-height: 26px;
                 }
             }
         }
@@ -643,6 +834,9 @@ h5 {
                 text-align: right;
                 line-height: 26px;
                 cursor: pointer;
+                &:hover{
+                    color: $bgcolor;
+                }
             }
         }
     }

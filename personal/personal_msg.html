@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>yyk</title>
+		<link rel="stylesheet" href="../layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../css/common.css" media="all">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="header-container">
+				<div class="header-logo">
+					<img src="../imgs/logo.png" />
+				</div>
+				<div class="header-search">
+					<input type="text" name="" id="" value="" class="left" />
+					<span class="search left">搜索</span>
+					<span class="hight-search left">高级搜索</span>
+				</div>
+				<div class="header-nav">
+					<ul class="layui-nav" lay-filter="">
+						<li class="layui-nav-item layui-this">
+							<a href="">首页</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="">国别与区域语言概况</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="">语言政策文本</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">语言政策研究</a>
+							<dl class="layui-nav-child">
+								<!-- 二级菜单 -->
+								<dd>
+									<a href="">移动模块</a>
+								</dd>
+								<dd>
+									<a href="">后台模版</a>
+								</dd>
+								<dd>
+									<a href="">电商平台</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="">语言教育</a>
+						</li>
+						<!--<li class="login right">
+							<a>gggg</a><span>|</span>
+							<a>注销</a>
+						</li>-->
+						<li class="login right entry"><a>登录</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="mask-search">
+			<div class="search-term">
+				<form class="layui-form" action="">
+					<!--描述： 条件1 -->
+					<div class="layui-form-item">
+						<label id="add-select" class="layui-form-label add-icon"></label>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">全文</option>
+								<option value="2">标题</option>
+								<option value="3">关键字</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">与</option>
+								<option value="2">或</option>
+								<option value="3">非</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<!--描述： 条件2-->
+					<div id="add-select1" class="layui-form-item slect-hide">
+						<label class="layui-form-label add-icon dec-icon" data-id="1"></label>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">全文</option>
+								<option value="2">标题</option>
+								<option value="3">关键字</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">与</option>
+								<option value="2">或</option>
+								<option value="3">非</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<!--描述： 条件3-->
+					<div id="add-select2" class="layui-form-item slect-hide">
+						<label class="layui-form-label add-icon dec-icon" data-id="2"></label>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">全文</option>
+								<option value="2">标题</option>
+								<option value="3">关键字</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-input-inline select-type">
+							<select name="quiz3">
+								<option value="">请选择</option>
+								<option value="1">与</option>
+								<option value="2">或</option>
+								<option value="3">非</option>
+							</select>
+						</div>
+						<div class="layui-input-inline select-cont">
+							<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label id="selet-date" class="layui-form-label add-icon select-icon"></label>
+						<div class="layui-form-mid layui-word-aux select-text">出版日期</div>
+						<div class="layui-input-inline select-date">
+							<input class="layui-input" placeholder="开始日期" onclick="layui.laydate({elem: this, max: laydate.now()})"><i></i>
+						</div>
+						<div class="layui-form-mid layui-word-aux select-text">至</div>
+						<div class="layui-input-inline select-date">
+							<input class="layui-input" placeholder="截止日期" onclick="layui.laydate({elem: this,  max: laydate.now()})">
+							<i></i>
+						</div>
+					</div>
+					<div class="layui-form-item search-submit">
+						<div class="layui-input-block">
+							<button id="searchRrsult" type="button" class="layui-btn btn-submit">检索</button>
+							<button type="reset" class="layui-btn btn-cancel">取消</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="mask-login">
+			<div class="sign-in">
+				<div class="title">会员登录</div>
+				<ul>
+					<li><input type="text" placeholder="账号或用户名"></li>
+					<li><input type="password" placeholder="密码"></li>
+					<li><input type="text" placeholder="验证码"> <img src="../imgs/code.png"/></li>
+					<li class="login-in"><button type="button">登录</button></li>
+				</ul>
+				
+			</div>
+		</div>
+		<div class="main main-bg">
+			<div class="main-content">
+				<div class="location">
+					当前位置：
+					<span class="layui-breadcrumb">
+					  	<a href="">个人中心</a><a href="">个人档案</a>
+					</span>
+				</div>
+				<div class="layui-clear">
+					<div class="nav-list left">
+						<div class="nav-title">
+							个人中心
+						</div>
+						<ul class="layui-nav layui-nav-tree" lay-filter="test">
+							<li class="list-item">
+								<a class="active" href="javascript:;">个人档案</a>
+							</li>
+							<li class="list-item">
+								<a href="javascript:;">修改密码</a>
+							</li>
+							<li class="list-item">
+								<a href="javascript:;">我的收藏</a>
+							</li>
+							<li class="list-item">
+								<a  href="javascript:;">检索历史</a>
+							</li>
+							<li class="list-item">
+								<a href="javascript:;">浏览记录</a>
+							</li>
+						</ul>
+					</div>
+					<div class="list-content right">
+						<div class="personal-center">
+							<div class="title">
+								个人档案   <a class="right make" >修改</a>
+							</div>
+							<ul class="msglist msglist1">
+								<li><span class="name">账号：</span><span>你哈啊</span></li>
+								<li><span class="name">真实姓名：</span><span>你哈啊</span></li>
+								<li><span class="name">性别：</span><span>男</span></li>
+								<li><span class="name">出生日期：</span><span>2016-06-06</span></li>
+								<li><span class="name">手机号：</span><span>12345678901</span></li>
+								<li class="layui-clear"><span class="name left">联系地址：</span><span class="adress left">你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊</span></li>
+								<li class="layui-clear"><span class="name left">工作单位/学校：</span><span class="adress left">你哈你哈啊你哈啊你哈啊你哈啊你哈啊啊</span></li>
+								<li><span class="name">职业：</span><span>你哈啊</span></li>
+								<li><span class="name">学科：</span><span>你哈啊</span></li>
+							</ul>
+							<ul class="msglist hide msglist2">
+								<li><span class="name">账号：</span><span>你哈啊</span></li>
+								<li><span class="name">真实姓名：</span><input class="layui-input" type="text" value="你哈啊" /></li>
+								<li><span class="name">性别：</span>
+									<div class="sex">
+										<span class="">男</span><input type="radio" name="sex" value="男" title="男" checked>
+      									<span >女</span><input class="female" type="radio" name="sex" value="女" title="女" >
+									</div>
+								</li>
+								<li><span class="name">出生日期：</span><input id="date" class="layui-input date" name="birthDate" placeholder="2010-06-16" ></li>
+								<li><span class="name">手机号：</span><input class="layui-input" type="text" value="12345678901" /></li>
+								<li class="layui-clear"><span class="name left">联系地址：</span><input class="layui-input adress2" type="text" value="你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊" /></li>
+								<li class="layui-clear"><span class="name left">工作单位/学校：</span><input class="layui-input adress2" type="text" value="你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊" /></li>
+								<li><span class="name">职业：</span><input class="layui-input" type="text" value="12345678901" /></li>
+								<li><span class="name">学科：</span><input class="layui-input" type="text" value="12345678901" /></li>
+								<li class="handle layui-clear"><button class="layui-btn btn1 left">保存</button><button id="cancel" class="layui-btn btn2 right" >取消</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="title">
+				<li>
+					<a href="">数据库简介</a>
+				</li>
+				<li>
+					<a href="">使用说明</a>
+				</li>
+				<li>
+					<a href="">关于我们</a>
+				</li>
+				<li>
+					<a href="">版权说明</a>
+				</li>
+			</ul>
+			<p>Copyright © 宁夏大学国际教育学院 All Rights Reserved<br>通讯地址：宁夏银川市西夏区文萃北街217号 宁夏大学国际教育学院</p>
+		</div>
+	</body>
+
+	<script src="../layui/layui.js"></script>
+	<script>
+		
+		layui.use(['element', 'jquery', 'laypage', 'layer','form','laydate'], function() {
+			var $ = layui.jquery,
+				laypage = layui.laypage,
+				layer = layui.layer,
+				laydate = layui.laydate,
+				form = layui.form(),
+				element = layui.element();
+				
+				//登陆
+				$('.header .entry').on('click',function(){
+					$('.mask-login').fadeIn();
+				})
+				//检索操作
+				$('.header .hight-search').on('click',function(){
+					$('.mask-search').show();
+				});
+				$('#add-select').on('click',function(e){
+					
+					if($($('.mask-search .slect-hide')[0]).css('display')=='none'){
+						$($('.mask-search .slect-hide')[0]).css('display','block');
+						return;
+					}
+					if($($('.mask-search .slect-hide')[1]).css('display')=='none'){
+						$($('.mask-search .slect-hide')[1]).css('display','block');
+						return;
+					}
+					
+				});
+				$('.mask-search .layui-form-item .dec-icon').bind('click',function(e){
+					var elemId = '#add-select' + $(e.target).attr('data-id');					
+					$(elemId).hide();
+				});
+				var dateType = false;
+				$('#selet-date').on('click',function(e){
+					if(dateType){
+						dateType = false;
+						$(e.target).removeClass('selected-icon').addClass('select-icon');
+					}else{
+						dateType = true;
+						$(e.target).removeClass('select-icon').addClass('selected-icon');
+					}
+				});
+				$('.mask-search .search-term .btn-cancel').on('click',function (){
+					$('.mask-search').hide();
+					$('#add-select1').hide();
+					$('#add-select2').hide();
+				});
+				//search表单提交监听
+				$('#searchRrsult').on('click',function(){
+					
+				});
+				//左侧导航栏
+				$('.main-content .nav-list .list-item>a').bind('click',function(e){
+					var elem = e.target;
+					$('.main-content .nav-list .list-item .active').removeClass('active');
+					$(elem).addClass('active');
+				});
+				// 日期
+				$('#date').on('click',function(){
+					laydate({elem: this, festival: true});
+				});
+				$('.list-content .personal-center .title .make').on('click',function(){
+					$('.list-content .personal-center .msglist1').hide();
+					$('.list-content .personal-center .msglist2').show();
+				});
+				$('#cancel').on('click',function(){
+					$('.list-content .personal-center .msglist1').show();
+					$('.list-content .personal-center .msglist2').hide();
+				});
+		})
+	</script>
+
+</html>
