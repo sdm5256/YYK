@@ -5,16 +5,16 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<title>yyk</title>
-		<link rel="stylesheet" href="../layui/css/layui.css" media="all">
-		<link rel="stylesheet" href="../css/common.css" media="all">
-		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/common.css" media="all">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
 	</head>
 
 	<body>
 		<div class="header">
 			<div class="header-container">
 				<div class="header-logo">
-					<img src="../imgs/logo.png" />
+					<img src="imgs/logo.png" />
 				</div>
 				<div class="header-search">
 					<input type="text" name="" id="" value="" class="left" />
@@ -50,6 +50,7 @@
 						<li class="layui-nav-item">
 							<a href="">语言教育</a>
 							<dl class="layui-nav-child">
+								<!-- 二级菜单 -->
 								<dd>
 									<a href="">人才培养</a>
 								</dd>
@@ -186,7 +187,7 @@
 				<ul>
 					<li><input type="text" placeholder="账号或用户名"></li>
 					<li><input type="password" placeholder="密码"></li>
-					<li><input type="text" placeholder="验证码"> <img src="../imgs/code.png"/></li>
+					<li><input type="text" placeholder="验证码"> <img src="imgs/code.png"/></li>
 					<li class="login-in"><button type="button">登录</button></li>
 				</ul>
 				
@@ -197,65 +198,47 @@
 				<div class="location">
 					当前位置：
 					<span class="layui-breadcrumb">
-					  	<a href="">个人中心</a><a href="">个人档案</a>
+					  	<a href="">语言教育</a>
 					</span>
 				</div>
 				<div class="layui-clear">
 					<div class="nav-list left">
 						<div class="nav-title">
-							个人中心
+							语言教育
 						</div>
 						<ul class="layui-nav layui-nav-tree" lay-filter="test">
 							<li class="list-item">
-								<a class="active" href="javascript:;">个人档案</a>
+								<a  href="javascript:;">人才培养</a>
 							</li>
 							<li class="list-item">
-								<a href="javascript:;">修改密码</a>
+								<a href="javascript:;">学科建设</a>
 							</li>
 							<li class="list-item">
-								<a href="javascript:;">我的收藏</a>
+								<a href="javascript:;">经典教材</a>
 							</li>
 							<li class="list-item">
-								<a  href="javascript:;">检索历史</a>
+								<a href="javascript:;">专家学者</a>
 							</li>
 							<li class="list-item">
-								<a href="javascript:;">浏览记录</a>
+								<a class="active" href="javascript:;">语言规划机构</a>
 							</li>
 						</ul>
 					</div>
 					<div class="list-content right">
-						<div class="personal-center">
-							<div class="title">
-								个人档案   <a class="right make" >修改</a>
-							</div>
-							<ul class="msglist msglist1">
-								<li><span class="name">账号：</span><span>你哈啊</span></li>
-								<li><span class="name">真实姓名：</span><span>你哈啊</span></li>
-								<li><span class="name">性别：</span><span>男</span></li>
-								<li><span class="name">出生日期：</span><span>2016-06-06</span></li>
-								<li><span class="name">手机号：</span><span>12345678901</span></li>
-								<li class="layui-clear"><span class="name left">联系地址：</span><span class="adress left">你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊</span></li>
-								<li class="layui-clear"><span class="name left">工作单位/学校：</span><span class="adress left">你哈你哈啊你哈啊你哈啊你哈啊你哈啊啊</span></li>
-								<li><span class="name">职业：</span><span>你哈啊</span></li>
-								<li><span class="name">学科：</span><span>你哈啊</span></li>
-							</ul>
-							<ul class="msglist hide msglist2">
-								<li><span class="name">账号：</span><span>你哈啊</span></li>
-								<li><span class="name">真实姓名：</span><input class="layui-input" type="text" value="你哈啊" /></li>
-								<li><span class="name">性别：</span>
-									<div class="sex">
-										<span class="">男</span><input type="radio" name="sex" value="男" title="男" checked>
-      									<span >女</span><input class="female" type="radio" name="sex" value="女" title="女" >
-									</div>
-								</li>
-								<li><span class="name">出生日期：</span><input id="date" class="layui-input date" name="birthDate" placeholder="2010-06-16" ></li>
-								<li><span class="name">手机号：</span><input class="layui-input" type="text" value="12345678901" /></li>
-								<li class="layui-clear"><span class="name left">联系地址：</span><input class="layui-input adress2" type="text" value="你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊" /></li>
-								<li class="layui-clear"><span class="name left">工作单位/学校：</span><input class="layui-input adress2" type="text" value="你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊" /></li>
-								<li><span class="name">职业：</span><input class="layui-input" type="text" value="12345678901" /></li>
-								<li><span class="name">学科：</span><input class="layui-input" type="text" value="12345678901" /></li>
-								<li class="handle layui-clear"><button class="layui-btn btn1 left">保存</button><button id="cancel" class="layui-btn btn2 right" >取消</button></li>
-							</ul>
+						<div class="content-title">
+							语言规划机构
+						</div>
+						<div class="list-img">
+							<img src="imgs/list.png" />
+						</div>
+						<div class="author-list organization">
+							<a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心.阿甘</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a>
+							<a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心.阿甘</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a>
+							<a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心.阿甘</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a>
+							<a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心.阿甘</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心.阿甘</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a>
+							<a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心.阿甘</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a>
+							<a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心.阿甘</a><a>北京大学中国语言学研究中心</a><a>北京大学中国语言学研究中心</a>
+							
 						</div>
 					</div>
 				</div>
@@ -280,7 +263,7 @@
 		</div>
 	</body>
 
-	<script src="../layui/layui.js"></script>
+	<script src="layui/layui.js"></script>
 	<script>
 		
 		layui.use(['element', 'jquery', 'laypage', 'layer','form','laydate'], function() {
@@ -340,17 +323,12 @@
 					$('.main-content .nav-list .list-item .active').removeClass('active');
 					$(elem).addClass('active');
 				});
-				// 日期
-				$('#date').bind('click',function(){
-					laydate({elem: this, festival: true});
-				});
-				$('.list-content .personal-center .title .make').bind('click',function(){
-					$('.list-content .personal-center .msglist1').hide();
-					$('.list-content .personal-center .msglist2').show();
-				});
-				$('#cancel').bind('click',function(){
-					$('.list-content .personal-center .msglist1').show();
-					$('.list-content .personal-center .msglist2').hide();
+				// 学者选择
+				$('.main-content .list-content .author-list>a').bind('click',function(e){
+					var elem = e.target;
+					
+					$('.main-content .list-content .author-list .actived').removeClass('actived');
+					$(elem).addClass('actived');
 				});
 		})
 	</script>

@@ -73,6 +73,7 @@
 			var zIndexArr = [];
 			//左旋转
 			if(dir === "left"){
+				var indexNum = 0;
 				this.posterItems .each(function(){
 					var self = $(this),
 						   prev = self.prev().get(0)?self.prev():_this_.posterLastItem,
@@ -82,6 +83,8 @@
 						   opacity = prev.css("opacity"),
 						   left = prev.css("left"),
 						   top = prev.css("top");
+						    var elemId = $(this).attr('data-id');
+							$('#'+elemId).hide();
 							zIndexArr.push(zIndex);	
 						   self.animate({
 							   					width:width,
@@ -97,6 +100,10 @@
 				//zIndex需要单独保存再设置，防止循环时候设置再取的时候值永远是最后一个的zindex
 				this.posterItems.each(function(i){
 					$(this).css("zIndex",zIndexArr[i]);
+					var elemId = $(this).attr('data-id');
+					if(zIndexArr[i]==2){
+						$('#'+elemId).show();
+					}
 				});
 			}else if(dir === "right"){//右旋转
 				this.posterItems .each(function(){

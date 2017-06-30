@@ -82,6 +82,7 @@ h5 {
         background: #3875c2;
         padding: 0px 5px;
         width: 250px;
+        height: 30px;
         line-height: 30px; }
       .header .header-container .header-search span {
         color: #fff;
@@ -107,6 +108,9 @@ h5 {
         padding: 0px 34px; }
         .header .header-container .header-nav .layui-nav-item > a > span {
           display: none; }
+      .header .header-container .header-nav .layui-nav-item .layui-nav-child a:hover {
+        background-color: #3875c2;
+        color: #fff; }
     .header .header-container .header-nav .login {
       line-height: 45px; }
       .header .header-container .header-nav .login > a {
@@ -197,6 +201,7 @@ h5 {
   top: 0;
   left: 0;
   z-index: 999;
+  background: #fff;
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 100%; }
@@ -309,7 +314,12 @@ h5 {
           .main .main-content .banner ul li a {
             color: #fff;
             font-size: 24px;
-            cursor: pointer; }
+            cursor: pointer;
+            opacity: .5;
+            transition: all .3s;
+            -webkit-transition: all .3s; }
+            .main .main-content .banner ul li a:hover {
+              opacity: 1; }
     .main .main-content .iterm {
       padding: 30px 20px;
       border-bottom: 1px solid #e1e1e1; }
@@ -320,6 +330,8 @@ h5 {
         .main .main-content .iterm .title a {
           font-size: 16px;
           cursor: pointer; }
+          .main .main-content .iterm .title a:hover {
+            color: #3875c2; }
       .main .main-content .iterm > ul {
         padding-top: 20px; }
         .main .main-content .iterm > ul li {
@@ -399,12 +411,29 @@ h5 {
       background: #fff;
       display: inline-block;
       width: 220px;
-      height: 890px; }
+      height: 890px;
+      /**国家列表**/
+      /**检索结页*/ }
       .main .main-content .nav-list .nav-title {
         font-size: 18px;
         line-height: 50px;
         padding-left: 20px;
         border-bottom: 1px solid #e1e1e1; }
+      .main .main-content .nav-list .selected-country {
+        box-sizing: border-box;
+        padding: 20px;
+        height: 90px;
+        font-size: 16px;
+        border-bottom: 1px solid #e1e1e1; }
+        .main .main-content .nav-list .selected-country span {
+          display: inline-block;
+          background: #3875c2;
+          border-radius: 3px;
+          padding: 0px 8px;
+          line-height: 26px;
+          margin-top: 8px;
+          color: #fff;
+          font-size: 14px; }
       .main .main-content .nav-list .layui-nav {
         width: 100%;
         background: #fff; }
@@ -422,12 +451,77 @@ h5 {
           .main .main-content .nav-list .layui-nav .list-item .active {
             background: #3875c2;
             color: #fff; }
+      .main .main-content .nav-list .border {
+        border-bottom: 3px solid #3875c2; }
+      .main .main-content .nav-list .country-list {
+        box-sizing: border-box;
+        padding: 20px;
+        height: 740px;
+        overflow-x: hidden;
+        overflow-y: auto; }
+        .main .main-content .nav-list .country-list .all {
+          color: #666; }
+        .main .main-content .nav-list .country-list .class-title {
+          padding: 15px 0px 10px 0px;
+          font-size: 16px; }
+        .main .main-content .nav-list .country-list .list-iterm {
+          line-height: 28px;
+          word-break: keep-all; }
+          .main .main-content .nav-list .country-list .list-iterm a {
+            display: inline-block;
+            color: #666;
+            margin-right: 15px; }
+            .main .main-content .nav-list .country-list .list-iterm a:hover {
+              cursor: pointer;
+              color: #3875c2; }
+      .main .main-content .nav-list .result-list {
+        max-height: 800px;
+        overflow-y: auto;
+        overflow-x: hidden; }
+        .main .main-content .nav-list .result-list .list-iterm {
+          padding-left: 20px;
+          line-height: 50px;
+          border-bottom: 1px solid #e1e1e1; }
+          .main .main-content .nav-list .result-list .list-iterm .iterm-title {
+            font-size: 18px; }
+            .main .main-content .nav-list .result-list .list-iterm .iterm-title .title-icon {
+              padding-right: 30px;
+              line-height: 50px;
+              font-size: 14px;
+              cursor: pointer; }
+            .main .main-content .nav-list .result-list .list-iterm .iterm-title .icon-down {
+              background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkNjIwMDRkNS00M2MzLTRkNWItOGVjMy01OTQwMWUzNmU5MTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENEMDg4MUE1NDk5MTFFNzg0M0ZCQUNDMzhGQzU2NTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENEMDg4MTk1NDk5MTFFNzg0M0ZCQUNDMzhGQzU2NTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplMjQxYzU4YS03M2JiLTQyNGUtOTE0Yi0xMDc1NmU1ZGRmMmEiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo4NTkwM2FlNS05MmYxLTExN2EtYjU5Yy1lMjMzNWY4NzFlMzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5ObJT6AAAAmVBMVEX////9/f2ioqKmpqb39/eysrLy8vLJycnr6+vCwsLk5OTe3t7t7e2lpaWpqanMzMz+/v6wsLDZ2dnb29vx8fH6+vq7u7v4+Pjv7+/W1tbm5ua/v7+goKC5ubnl5eWnp6eoqKi2trb5+fm4uLj19fXd3d2hoaHExMTPz8/29vbw8PDLy8u3t7e0tLTT09Pg4ODs7Oy+vr6rq6tf3yw2AAAAe0lEQVR42kSO1xKCUAxE9zaV3pSiKIogYEHh/z+OXHB0H5LsZDMncCP8ZBVIz2v/6x7CBpLXs9Rmd1RSd9a4W2A1GoxMSCXj5on3tAgxBBWwv+UmIFUMtM6GonfgIzx9++Yzy+L1ArAFsTwdWiTV5Rp0/3eYcWDzMAkwAAX8Bc6jNi5aAAAAAElFTkSuQmCC) no-repeat 80% 50%; }
+            .main .main-content .nav-list .result-list .list-iterm .iterm-title .icon-up {
+              background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkNjIwMDRkNS00M2MzLTRkNWItOGVjMy01OTQwMWUzNmU5MTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDBFN0YyMDE1NDk5MTFFN0E3QTBEMEIyNzUxMkU2OEUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDBFN0YyMDA1NDk5MTFFN0E3QTBEMEIyNzUxMkU2OEUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplMjQxYzU4YS03M2JiLTQyNGUtOTE0Yi0xMDc1NmU1ZGRmMmEiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo4NTkwM2FlNS05MmYxLTExN2EtYjU5Yy1lMjMzNWY4NzFlMzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4Tz2lLAAAAmVBMVEX////9/f2ioqKmpqb39/eysrLy8vLJycnr6+vCwsLk5OTe3t7t7e2lpaWpqanMzMz+/v6wsLDZ2dnb29vx8fH6+vq7u7v4+Pjv7+/W1tbm5ua/v7+goKC5ubnl5eWnp6eoqKi2trb5+fm4uLj19fXd3d2hoaHExMTPz8/29vbw8PDLy8u3t7e0tLTT09Pg4ODs7Oy+vr6rq6tf3yw2AAAAeUlEQVR42kSO5xKCQBCDwx29NxUQKQooIFje/+G4BUv+ZDKT3S8ASToaEn7qg0utyN+kOx58jdtbaplFFrEHmcefwKBS6Qbs6cjMuwxoghdC8XJmhclSAQiJYrxFNXavK0tWTjvy8306ADYfPzxfqxKU1n9O5C4CDAC4nAXOC6JSiAAAAABJRU5ErkJggg==) no-repeat 80% 50%; }
+          .main .main-content .nav-list .result-list .list-iterm .select-list {
+            display: none; }
+            .main .main-content .nav-list .result-list .list-iterm .select-list li {
+              position: relative;
+              padding-left: 18px;
+              line-height: 40px; }
+              .main .main-content .nav-list .result-list .list-iterm .select-list li input[type=checkbox] {
+                position: absolute;
+                top: 13px;
+                left: 0px;
+                width: 15px;
+                height: 15px; }
+              .main .main-content .nav-list .result-list .list-iterm .select-list li a {
+                color: #666; }
+          .main .main-content .nav-list .result-list .list-iterm .show {
+            display: block; }
     .main .main-content .list-content {
       display: inline-block;
       background: #fff;
       width: 760px;
       height: 890px;
+      /*检索结果*/
+      /*学科建设&人才培养*/
+      /*经典教材列表*/
+      /*专家学者列表*/
       /* 个人中心 */ }
+      .main .main-content .list-content .page {
+        padding-top: 10px;
+        text-align: center; }
       .main .main-content .list-content .content-title {
         position: relative;
         font-size: 18px;
@@ -444,8 +538,111 @@ h5 {
           background: #3875c2; }
       .main .main-content .list-content .list-img {
         height: 190px; }
+      .main .main-content .list-content .result-cont .layui-tab {
+        position: relative; }
+        .main .main-content .list-content .result-cont .layui-tab .layui-tab-title {
+          height: 43px; }
+          .main .main-content .list-content .result-cont .layui-tab .layui-tab-title .layui-this {
+            color: #3875c2; }
+            .main .main-content .list-content .result-cont .layui-tab .layui-tab-title .layui-this:after {
+              top: 2px;
+              border-bottom: 3px solid #3875c2; }
+          .main .main-content .list-content .result-cont .layui-tab .layui-tab-title li {
+            color: #999;
+            font-size: 18px; }
+        .main .main-content .list-content .result-cont .layui-tab .country-msg-title {
+          line-height: 50px;
+          font-size: 18px;
+          margin-top: -10px;
+          padding-left: 20px;
+          border-bottom: 3px solid #3875c2; }
+        .main .main-content .list-content .result-cont .layui-tab .result-search {
+          position: absolute;
+          top: 8px;
+          right: 20px;
+          z-index: 5; }
+          .main .main-content .list-content .result-cont .layui-tab .result-search input {
+            width: 180px;
+            height: 30px;
+            color: #999;
+            line-height: 30px;
+            padding: 0px 5px;
+            border: 1px solid #3875c2;
+            border-right: none; }
+          .main .main-content .list-content .result-cont .layui-tab .result-search .layui-input:hover {
+            border-color: #3875c2 !important; }
+          .main .main-content .list-content .result-cont .layui-tab .result-search .layui-input:focus {
+            border-color: #3875c2 !important; }
+          .main .main-content .list-content .result-cont .layui-tab .result-search span {
+            background: #3875c2;
+            height: 30px;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+            padding: 0px 10px; }
+        .main .main-content .list-content .result-cont .layui-tab .layui-tab-content ul li {
+          padding: 0px 20px;
+          line-height: 40px;
+          height: 40px; }
+          .main .main-content .list-content .result-cont .layui-tab .layui-tab-content ul li:nth-child(even) {
+            background: #f5f5f5; }
+          .main .main-content .list-content .result-cont .layui-tab .layui-tab-content ul li .title {
+            display: inline-block;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 480px; }
+            .main .main-content .list-content .result-cont .layui-tab .layui-tab-content ul li .title:hover {
+              color: #3875c2;
+              cursor: pointer; }
+          .main .main-content .list-content .result-cont .layui-tab .layui-tab-content ul li .datetime {
+            color: #999;
+            font-size: 16px; }
+      .main .main-content .list-content .develop {
+        padding: 10px 0px; }
+        .main .main-content .list-content .develop ul li {
+          padding: 0px 20px 10px 20px;
+          border-bottom: 1px solid #e1e1e1; }
+          .main .main-content .list-content .develop ul li a {
+            display: block; }
+            .main .main-content .list-content .develop ul li a:hover {
+              cursor: pointer; }
+            .main .main-content .list-content .develop ul li a div {
+              padding: 10px 0px 20px 0px;
+              color: #333;
+              font-size: 16px; }
+            .main .main-content .list-content .develop ul li a p {
+              color: #666;
+              line-height: 26px; }
+      .main .main-content .list-content .book-list {
+        padding: 10px 20px; }
+        .main .main-content .list-content .book-list ul {
+          font-size: 0; }
+          .main .main-content .list-content .book-list ul li {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 180px;
+            padding: 10px 10px;
+            border-bottom: 1px solid #e1e1e1;
+            border-right: 1px solid #e1e1e1; }
+            .main .main-content .list-content .book-list ul li a {
+              display: bblock; }
+              .main .main-content .list-content .book-list ul li a:hover {
+                cursor: pointer;
+                color: #3875c2; }
+              .main .main-content .list-content .book-list ul li a .bookimg img {
+                width: 160px;
+                height: 220px; }
+              .main .main-content .list-content .book-list ul li a .booktitle {
+                padding: 10px 5px 0px 5px;
+                text-align: center;
+                font-size: 14px; }
+          .main .main-content .list-content .book-list ul .border-none {
+            border-right: none; }
       .main .main-content .list-content .author-list {
-        padding: 15px; }
+        padding: 15px;
+        font-size: 0; }
         .main .main-content .list-content .author-list a {
           display: inline-block;
           width: 120px;
@@ -460,6 +657,10 @@ h5 {
             color: #3875c2; }
         .main .main-content .list-content .author-list .actived {
           color: #3875c2; }
+      .main .main-content .list-content .organization a {
+        width: 225px;
+        padding-left: 15px;
+        text-align: left; }
       .main .main-content .list-content .personal-center {
         padding: 10px;
         padding-top: 0;
@@ -651,6 +852,29 @@ h5 {
         cursor: pointer; }
         .main .main-content .detail .spread:hover {
           color: #3875c2; }
+    .main .main-content .text-detail {
+      background: #fff;
+      height: 800px;
+      padding: 0px 40px;
+      overflow-y: auto; }
+      .main .main-content .text-detail h5 {
+        font-size: 32px;
+        text-align: center;
+        padding: 30px 0px;
+        border-bottom: 1px solid #e1e1e1; }
+      .main .main-content .text-detail .fontsize {
+        text-align: right;
+        padding-top: 10px; }
+        .main .main-content .text-detail .fontsize a {
+          padding: 0px 10px; }
+          .main .main-content .text-detail .fontsize a:hover {
+            cursor: pointer;
+            color: #3875c2; }
+      .main .main-content .text-detail .text {
+        padding: 25px 20px; }
+        .main .main-content .text-detail .text p {
+          text-indent: 2em;
+          line-height: 26px; }
 
 .main-bg {
   background: #f5f5f5; }

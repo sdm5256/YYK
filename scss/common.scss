@@ -105,6 +105,7 @@ h5 {
                 background: $bgcolor;
                 padding: 0px 5px;
                 width: 250px;
+                height: 30px;
                 line-height: 30px;
             }
             span {
@@ -125,7 +126,6 @@ h5 {
         .header-nav {
             .layui-nav {
                 background: $bgcolor;
-                
                 .layui-this {
                     &:after {
                         background: #FFF;
@@ -144,6 +144,12 @@ h5 {
                     
                     >span{
                         display: none;
+                    }
+                }
+                .layui-nav-child{
+                    a:hover {
+                        background-color: $bgcolor;
+                        color: #fff;
                     }
                 }
             }
@@ -262,6 +268,7 @@ h5 {
 .mask-login {
     display: none;
     @include position(top,0,left,0,999);
+    background: #fff;
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     height: 100%;
@@ -384,6 +391,12 @@ h5 {
                         color: #fff;
                         font-size: 24px;
                         cursor: pointer;
+                        opacity: .5;
+                        transition: all .3s;
+                        -webkit-transition: all .3s;
+                        &:hover{
+                            opacity: 1;
+                        }
                     }
                 }
               
@@ -400,6 +413,9 @@ h5 {
                 a {
                    font-size: 16px;
                    cursor: pointer;
+                   &:hover{
+                       color: $bgcolor;
+                   }
                 }
             }
             >ul {
@@ -517,6 +533,23 @@ h5 {
                 padding-left: 20px;
                 border-bottom: 1px solid #e1e1e1;
             }
+            .selected-country{
+                box-sizing: border-box;
+                padding: 20px;
+                height: 90px;
+                font-size: 16px;
+                border-bottom: 1px solid #e1e1e1;
+                span{
+                    display: inline-block;
+                    background: $bgcolor;
+                    border-radius: 3px;
+                    padding: 0px 8px;
+                    line-height: 26px;
+                    margin-top: 8px;
+                    color: #fff;
+                    font-size: 14px; 
+                }
+            }
             .layui-nav {
                 width: 100%;
                 background: #fff; 
@@ -539,6 +572,85 @@ h5 {
                     }
                 }
             }
+            .border{
+                border-bottom: 3px solid $bgcolor;
+            }
+            /**国家列表**/
+            .country-list {
+                box-sizing: border-box;
+                padding: 20px;
+                height: 740px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                .all{
+                    color: #666;
+                }
+                .class-title{
+                    padding: 15px 0px 10px 0px;
+                    font-size: 16px;
+                }
+                .list-iterm{
+                    line-height: 28px;
+                    word-break:  keep-all; 
+                    a{
+                        display: inline-block;
+                        color: #666;
+                        margin-right: 15px;
+                        &:hover{
+                            cursor: pointer;
+                            color: $bgcolor;
+                        }
+                    }
+                }
+            }
+            /**检索结页*/
+            .result-list{
+                max-height: 800px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                .list-iterm{
+                    padding-left: 20px; 
+                    line-height: 50px;
+                    border-bottom: 1px solid #e1e1e1;
+                    .iterm-title{
+                        font-size: 18px;
+                        .title-icon{
+                            padding-right: 30px;
+                            line-height: 50px;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
+                        .icon-down{
+                            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkNjIwMDRkNS00M2MzLTRkNWItOGVjMy01OTQwMWUzNmU5MTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENEMDg4MUE1NDk5MTFFNzg0M0ZCQUNDMzhGQzU2NTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENEMDg4MTk1NDk5MTFFNzg0M0ZCQUNDMzhGQzU2NTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplMjQxYzU4YS03M2JiLTQyNGUtOTE0Yi0xMDc1NmU1ZGRmMmEiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo4NTkwM2FlNS05MmYxLTExN2EtYjU5Yy1lMjMzNWY4NzFlMzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5ObJT6AAAAmVBMVEX////9/f2ioqKmpqb39/eysrLy8vLJycnr6+vCwsLk5OTe3t7t7e2lpaWpqanMzMz+/v6wsLDZ2dnb29vx8fH6+vq7u7v4+Pjv7+/W1tbm5ua/v7+goKC5ubnl5eWnp6eoqKi2trb5+fm4uLj19fXd3d2hoaHExMTPz8/29vbw8PDLy8u3t7e0tLTT09Pg4ODs7Oy+vr6rq6tf3yw2AAAAe0lEQVR42kSO1xKCUAxE9zaV3pSiKIogYEHh/z+OXHB0H5LsZDMncCP8ZBVIz2v/6x7CBpLXs9Rmd1RSd9a4W2A1GoxMSCXj5on3tAgxBBWwv+UmIFUMtM6GonfgIzx9++Yzy+L1ArAFsTwdWiTV5Rp0/3eYcWDzMAkwAAX8Bc6jNi5aAAAAAElFTkSuQmCC) no-repeat 80% 50%;
+                        }
+                        .icon-up{
+                            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAMAAAB4W0xQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkNjIwMDRkNS00M2MzLTRkNWItOGVjMy01OTQwMWUzNmU5MTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDBFN0YyMDE1NDk5MTFFN0E3QTBEMEIyNzUxMkU2OEUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDBFN0YyMDA1NDk5MTFFN0E3QTBEMEIyNzUxMkU2OEUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplMjQxYzU4YS03M2JiLTQyNGUtOTE0Yi0xMDc1NmU1ZGRmMmEiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo4NTkwM2FlNS05MmYxLTExN2EtYjU5Yy1lMjMzNWY4NzFlMzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4Tz2lLAAAAmVBMVEX////9/f2ioqKmpqb39/eysrLy8vLJycnr6+vCwsLk5OTe3t7t7e2lpaWpqanMzMz+/v6wsLDZ2dnb29vx8fH6+vq7u7v4+Pjv7+/W1tbm5ua/v7+goKC5ubnl5eWnp6eoqKi2trb5+fm4uLj19fXd3d2hoaHExMTPz8/29vbw8PDLy8u3t7e0tLTT09Pg4ODs7Oy+vr6rq6tf3yw2AAAAeUlEQVR42kSO5xKCQBCDwx29NxUQKQooIFje/+G4BUv+ZDKT3S8ASToaEn7qg0utyN+kOx58jdtbaplFFrEHmcefwKBS6Qbs6cjMuwxoghdC8XJmhclSAQiJYrxFNXavK0tWTjvy8306ADYfPzxfqxKU1n9O5C4CDAC4nAXOC6JSiAAAAABJRU5ErkJggg==) no-repeat 80% 50%;
+                        }
+                        
+                    }
+                    .select-list {
+                        display: none;
+                        li{
+                            position: relative;
+                            padding-left: 18px ;
+                            line-height: 40px;
+                            input[type=checkbox]{
+                                position: absolute;
+                                top: 13px;
+                                left: 0px;
+                                width: 15px;
+                                height: 15px;
+                            }
+                            a{
+                                color: #666;
+                            }
+                        }
+                    }
+                    .show{
+                        display: block;
+                    }
+                }
+            }
         }
         /*右侧内容*/
         .list-content{
@@ -546,6 +658,10 @@ h5 {
             background: #fff;
             width: 760px;
             height: 890px;
+            .page{
+                padding-top: 10px;
+                text-align: center;
+            }
             .content-title{
                 position: relative;
                 font-size: 18px;
@@ -562,8 +678,157 @@ h5 {
             .list-img{
                 height: 190px;
             }
+            /*检索结果*/
+            .result-cont{
+                .layui-tab{
+                    position: relative;
+                    .layui-tab-title{
+                        height: 43px;
+                        .layui-this{
+                            color: $bgcolor;
+                            &:after{
+                                top: 2px;
+                                border-bottom: 3px solid $bgcolor;
+                            }
+                        }
+                        li{
+                            color: #999;
+                            font-size: 18px;
+                        }
+                    }
+                    .country-msg-title{
+                        line-height: 50px;
+                        font-size: 18px;
+                        margin-top: -10px;
+                        padding-left: 20px;
+                        border-bottom: 3px solid $bgcolor;
+                    }
+                    .result-search{
+                        @include position(top,8px,right,20px,5);
+                        input{
+                            width: 180px;
+                            height: 30px;
+                            color: #999;
+                            line-height: 30px;
+                            padding: 0px 5px;
+                            border: 1px solid $bgcolor;
+                            border-right: none; 
+                        }
+                        .layui-input:hover{
+                            border-color: $bgcolor!important;
+                        }
+                        .layui-input:focus{
+                            border-color: $bgcolor!important;
+                        }
+                        span{
+                            background: $bgcolor;
+                            height: 30px;
+                            color: #fff;
+                            line-height: 30px;
+                            text-align: center;
+                            padding: 0px 10px;
+                            
+                            
+                        }
+                    }
+                    .layui-tab-content{
+                        ul{
+                            li{
+                                padding: 0px 20px;
+                                line-height: 40px;
+                                height: 40px;
+                                &:nth-child(even){
+                                    background: #f5f5f5;
+                                }
+                                .title{
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    white-space: nowrap; 
+                                    overflow: hidden; 
+                                    text-overflow: ellipsis;
+                                    width: 480px;
+                                    &:hover{
+                                        color: $bgcolor;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .datetime{
+                                    color: #999;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /*学科建设&人才培养*/
+            .develop {
+                padding: 10px 0px;
+                ul{
+                    li{
+                        padding: 0px 20px 10px 20px;
+                        border-bottom: 1px solid #e1e1e1; 
+                        a{
+                            display: block;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            div{
+                                padding: 10px 0px 20px 0px;
+                                color: #333;
+                                font-size: 16px;
+                            }
+                            p{
+                                color: #666;
+                                line-height: 26px;
+                            } 
+                        }
+                        
+                    }
+                }
+                
+            }
+            /*经典教材列表*/
+            .book-list {
+                padding: 10px 20px;
+                ul {
+                    font-size: 0;
+                    li{
+                        display: inline-block;
+                        box-sizing: border-box;
+                        width: 180px;
+                        padding: 10px 10px;
+                        border-bottom: 1px solid #e1e1e1;
+                        border-right: 1px solid #e1e1e1;
+                        a{
+                            display: bblock;
+                            &:hover{
+                                cursor: pointer;
+                                color: $bgcolor;
+                            }
+                            .bookimg{
+                                img {
+                                    width: 160px;
+                                    height: 220px;
+                                }
+                            }
+                            .booktitle{
+                                padding: 10px 5px 0px 5px;
+                                text-align: center;
+                                font-size: 14px;
+                            } 
+                        }
+                        
+                    }
+                    .border-none{
+                        border-right: none;
+                    }
+                }
+            }
+            /*专家学者列表*/
             .author-list{
                 padding: 15px;
+                font-size: 0;
                 a{
                     display: inline-block;
                     width: 120px;
@@ -580,6 +845,13 @@ h5 {
                 }
                 .actived{
                     color: $bgcolor;
+                }
+            }
+            .organization{
+                a{
+                    width: 225px;
+                    padding-left: 15px;
+                    text-align: left;
                 }
             }
             /* 个人中心 */
@@ -836,6 +1108,36 @@ h5 {
                 cursor: pointer;
                 &:hover{
                     color: $bgcolor;
+                }
+            }
+        }
+        .text-detail{
+            background: #fff;
+            height: 800px;
+            padding: 0px 40px;
+            overflow-y: auto;
+            h5{
+                font-size: 32px;
+                text-align: center;
+                padding: 30px 0px;
+                border-bottom: 1px solid #e1e1e1;
+            }
+            .fontsize{
+                text-align: right;
+                padding-top: 10px;
+                a{
+                    padding: 0px 10px;
+                    &:hover{
+                        cursor: pointer;
+                        color: $bgcolor;
+                    }
+                }
+            }
+            .text{
+                padding: 25px 20px;
+                p{
+                    text-indent: 2em;
+                    line-height: 26px;
                 }
             }
         }

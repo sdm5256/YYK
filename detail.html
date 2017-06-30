@@ -5,16 +5,16 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<title>yyk</title>
-		<link rel="stylesheet" href="../layui/css/layui.css" media="all">
-		<link rel="stylesheet" href="../css/common.css" media="all">
-		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/common.css" media="all">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
 	</head>
 
 	<body>
 		<div class="header">
 			<div class="header-container">
 				<div class="header-logo">
-					<img src="../imgs/logo.png" />
+					<img src="imgs/logo.png" />
 				</div>
 				<div class="header-search">
 					<input type="text" name="" id="" value="" class="left" />
@@ -50,6 +50,7 @@
 						<li class="layui-nav-item">
 							<a href="">语言教育</a>
 							<dl class="layui-nav-child">
+								<!-- 二级菜单 -->
 								<dd>
 									<a href="">人才培养</a>
 								</dd>
@@ -186,7 +187,7 @@
 				<ul>
 					<li><input type="text" placeholder="账号或用户名"></li>
 					<li><input type="password" placeholder="密码"></li>
-					<li><input type="text" placeholder="验证码"> <img src="../imgs/code.png"/></li>
+					<li><input type="text" placeholder="验证码"> <img src="imgs/code.png"/></li>
 					<li class="login-in"><button type="button">登录</button></li>
 				</ul>
 				
@@ -197,67 +198,30 @@
 				<div class="location">
 					当前位置：
 					<span class="layui-breadcrumb">
-					  	<a href="">个人中心</a><a href="">个人档案</a>
+					  	<a href="">语言政策文本</a><a href="">语言政策文本详情</a>
 					</span>
 				</div>
 				<div class="layui-clear">
-					<div class="nav-list left">
-						<div class="nav-title">
-							个人中心
+					<div class="text-detail">
+						<h5>2016中卡文化年“美丽的中国-美丽的卡塔尔”摄影展开幕</h5>
+						<div class="fontsize">
+							<span>字号：</span><a data-type="-1">小</a><a data-type="0">中</a><a data-type="1">大</a>
 						</div>
-						<ul class="layui-nav layui-nav-tree" lay-filter="test">
-							<li class="list-item">
-								<a class="active" href="javascript:;">个人档案</a>
-							</li>
-							<li class="list-item">
-								<a href="javascript:;">修改密码</a>
-							</li>
-							<li class="list-item">
-								<a href="javascript:;">我的收藏</a>
-							</li>
-							<li class="list-item">
-								<a  href="javascript:;">检索历史</a>
-							</li>
-							<li class="list-item">
-								<a href="javascript:;">浏览记录</a>
-							</li>
-						</ul>
-					</div>
-					<div class="list-content right">
-						<div class="personal-center">
-							<div class="title">
-								个人档案   <a class="right make" >修改</a>
-							</div>
-							<ul class="msglist msglist1">
-								<li><span class="name">账号：</span><span>你哈啊</span></li>
-								<li><span class="name">真实姓名：</span><span>你哈啊</span></li>
-								<li><span class="name">性别：</span><span>男</span></li>
-								<li><span class="name">出生日期：</span><span>2016-06-06</span></li>
-								<li><span class="name">手机号：</span><span>12345678901</span></li>
-								<li class="layui-clear"><span class="name left">联系地址：</span><span class="adress left">你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊</span></li>
-								<li class="layui-clear"><span class="name left">工作单位/学校：</span><span class="adress left">你哈你哈啊你哈啊你哈啊你哈啊你哈啊啊</span></li>
-								<li><span class="name">职业：</span><span>你哈啊</span></li>
-								<li><span class="name">学科：</span><span>你哈啊</span></li>
-							</ul>
-							<ul class="msglist hide msglist2">
-								<li><span class="name">账号：</span><span>你哈啊</span></li>
-								<li><span class="name">真实姓名：</span><input class="layui-input" type="text" value="你哈啊" /></li>
-								<li><span class="name">性别：</span>
-									<div class="sex">
-										<span class="">男</span><input type="radio" name="sex" value="男" title="男" checked>
-      									<span >女</span><input class="female" type="radio" name="sex" value="女" title="女" >
-									</div>
-								</li>
-								<li><span class="name">出生日期：</span><input id="date" class="layui-input date" name="birthDate" placeholder="2010-06-16" ></li>
-								<li><span class="name">手机号：</span><input class="layui-input" type="text" value="12345678901" /></li>
-								<li class="layui-clear"><span class="name left">联系地址：</span><input class="layui-input adress2" type="text" value="你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊" /></li>
-								<li class="layui-clear"><span class="name left">工作单位/学校：</span><input class="layui-input adress2" type="text" value="你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊你哈啊" /></li>
-								<li><span class="name">职业：</span><input class="layui-input" type="text" value="12345678901" /></li>
-								<li><span class="name">学科：</span><input class="layui-input" type="text" value="12345678901" /></li>
-								<li class="handle layui-clear"><button class="layui-btn btn1 left">保存</button><button id="cancel" class="layui-btn btn2 right" >取消</button></li>
-							</ul>
+						<div class="text">
+							<p>2000多年，这是衡量中阿文明交流互鉴的时间维度。从古丝绸之路上的驼铃声声，到如今天涯若比邻的信息沟通，中国与阿拉伯世界这两大古老文明的交流互鉴，注定精彩不凡。</p>
+							<p>从未抛弃的友谊</p>
+							<p>在中国的历史进程中，汉唐盛世熠熠闪光，阿拉伯世界从未缺席这样的盛宴。</p>
+							<p>汉代，张骞出使西域，甘英到达条支；唐代，大食遣使达长安。中阿文明的交流不只开始早，还从一开始就打下了良好基础。</p>
+							<p>正是在唐代，公元7世纪，伊斯兰教传入中国。此后，中阿之间的文明对话有了更多共同语言，中阿文明不仅在物质上彼此丰富，在交流上更加直接和具体，在思想和精神上也互相分享。其中最典型的例子，当属明清持续多年的“以儒诠经”，通过吸收、改造儒家传统中的思想，来阐释伊斯兰教的内涵，堪称规模可观的文化交流与文明对话。</p>
+							<p>在古代，阿拉伯传教士就已经与中国朝觐者有着良好的宗教往来，中阿学术往来和商贸往来也非常兴盛。</p>
+							<p>近现代以来，在反帝反殖的斗争中，中阿持之以恒地相互支持与声援，增进了双方历久弥坚的深厚情谊。新中国成立和阿拉伯国家相继独立，开创了中阿友好交往的新纪元。1956年至1990年，中国同全部22个阿拉伯国家建立了外交关系。</p>
+							<p>逐渐升温的往来</p>
+							<p>今年1月，国家主席习近平先后访问沙特阿拉伯、埃及，推动中国与阿拉伯世界的文化交流与经贸往来继续升温。</p>
+							<p>在沙特阿拉伯，习近平与萨勒曼国王共同见证了双方在能源、通信、环境、文化、航天、科技等领域双边合作文件的签署，并建立全面战略伙伴关系；在埃及，习近平与塞西总统共同见证了双方在电力、基础设施建设、经贸、能源、金融、航空航天、文化、新闻、科技、气候变化等领域多项双边合作文件的签署，并共同为中埃苏伊士经贸合作</p>
+							<p>逐渐升温的往来</p>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -280,7 +244,7 @@
 		</div>
 	</body>
 
-	<script src="../layui/layui.js"></script>
+	<script src="layui/layui.js"></script>
 	<script>
 		
 		layui.use(['element', 'jquery', 'laypage', 'layer','form','laydate'], function() {
@@ -334,23 +298,21 @@
 				$('#searchRrsult').bind('click',function(){
 					
 				});
-				//左侧导航栏
-				$('.main-content .nav-list .list-item>a').bind('click',function(e){
+				//字体更改
+				$('.text-detail .fontsize>a').bind('click',function(e){
 					var elem = e.target;
-					$('.main-content .nav-list .list-item .active').removeClass('active');
-					$(elem).addClass('active');
-				});
-				// 日期
-				$('#date').bind('click',function(){
-					laydate({elem: this, festival: true});
-				});
-				$('.list-content .personal-center .title .make').bind('click',function(){
-					$('.list-content .personal-center .msglist1').hide();
-					$('.list-content .personal-center .msglist2').show();
-				});
-				$('#cancel').bind('click',function(){
-					$('.list-content .personal-center .msglist1').show();
-					$('.list-content .personal-center .msglist2').hide();
+					var type = +$(elem).attr('data-type');
+					switch(type){
+						case -1:
+							$('.text-detail .text>p').css('font-size','12px');
+							break;
+						case 0:
+						    $('.text-detail .text>p').css('font-size','14px');
+							break;
+						case 1:
+						    $('.text-detail .text>p').css('font-size','16px');
+							break;
+					}
 				});
 		})
 	</script>
