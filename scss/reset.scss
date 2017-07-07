@@ -1,0 +1,100 @@
+// 字体Unicode编码 微软雅黑:\5FAE\8F6F\96C5\9ED1 , 宋体:\5B8B\4F53
+$fontfamily: '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53', arial;
+$defaultColor: #333;
+
+// 盒模型
+@mixin box-sizing {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+// 清除浮动 
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+} 
+// 用rem设置字体尺寸并使用像素进行回退
+/**
+ *  p {
+      @include font-size(14px)
+    } 
+    >> 
+    p {
+      font-size: 14px; //如果浏览器不支持rem将使用这个规则进行覆盖
+      font-size: 0.8rem;
+    }
+**/
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+ 
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}  
+   
+// 超过宽度时，显示省略号 
+@mixin ellipsis() {
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 三角形箭头
+    direction方向
+    size大小
+    color颜色*/
+@mixin arrow($direction,$size,$color) {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    border-width: $size;
+    cursor: pointer;
+    @if $direction == top {
+        border-style: dashed dashed solid dashed;
+        border-color: transparent transparent $color transparent;
+        border-top: none;
+    }
+    @else if $direction == bottom {
+        border-style: solid dashed dashed dashed;
+        border-color: $color transparent transparent transparent;
+        border-bottom: none;
+    }
+    @else if $direction == right {
+        border-style: dashed dashed dashed solid;
+        border-color: transparent transparent transparent $color;
+        border-right: none;
+    }
+    @else if $direction == left {
+        border-style: dashed solid dashed dashed;
+        border-color: transparent $color transparent transparent;
+        border-left: none;
+    }
+}
+
+// 边框阴影
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// 圆角
+@mixin border-radius($radius) {
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -o-border-radius:$radius;
+    border-radius:$radius;
+}
