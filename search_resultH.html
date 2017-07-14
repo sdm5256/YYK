@@ -201,6 +201,108 @@
 					  	<a href="">语言教育</a>
 					</span>
 				</div>
+				<div class="search-hight">
+					<div class="search-term">
+						<form class="layui-form" action="">
+							<!--描述： 条件1 -->
+							<div class="layui-form-item">
+								<label id="add2-select" class="layui-form-label add-icon continu-add"></label>
+								<div class="layui-input-inline select-type">
+									<select name="quiz3">
+										<option value="">请选择</option>
+										<option value="1">全文</option>
+										<option value="2">标题</option>
+										<option value="3">关键字</option>
+									</select>
+								</div>
+								<div class="layui-input-inline select-cont">
+									<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-input-inline select-type">
+									<select name="quiz3">
+										<option value="">请选择</option>
+										<option value="1">与</option>
+										<option value="2">或</option>
+										<option value="3">非</option>
+									</select>
+								</div>
+								<div class="layui-input-inline select-cont">
+									<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<!--描述： 条件2-->
+							<div id="add2-select1" class="layui-form-item slect-hide">
+								<label class="layui-form-label add-icon dec-icon" data-id="1"></label>
+								<div class="layui-input-inline select-type">
+									<select name="quiz3">
+										<option value="">请选择</option>
+										<option value="1">全文</option>
+										<option value="2">标题</option>
+										<option value="3">关键字</option>
+									</select>
+								</div>
+								<div class="layui-input-inline select-cont">
+									<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-input-inline select-type">
+									<select name="quiz3">
+										<option value="">请选择</option>
+										<option value="1">与</option>
+										<option value="2">或</option>
+										<option value="3">非</option>
+									</select>
+								</div>
+								<div class="layui-input-inline select-cont">
+									<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<!--描述： 条件3-->
+							<div id="add2-select2" class="layui-form-item slect-hide">
+								<label class="layui-form-label add-icon dec-icon" data-id="2"></label>
+								<div class="layui-input-inline select-type">
+									<select name="quiz3">
+										<option value="">请选择</option>
+										<option value="1">全文</option>
+										<option value="2">标题</option>
+										<option value="3">关键字</option>
+									</select>
+								</div>
+								<div class="layui-input-inline select-cont">
+									<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-input-inline select-type">
+									<select name="quiz3">
+										<option value="">请选择</option>
+										<option value="1">与</option>
+										<option value="2">或</option>
+										<option value="3">非</option>
+									</select>
+								</div>
+								<div class="layui-input-inline select-cont">
+									<input type="text" name="" placeholder="请输入" autocomplete="off" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label id="selet-date2" class="layui-form-label add-icon select-icon"></label>
+								<div class="layui-form-mid layui-word-aux select-text">出版日期</div>
+								<div class="layui-input-inline select-date">
+									<input class="layui-input" placeholder="开始日期" onclick="layui.laydate({elem: this, max: laydate.now()})"><i></i>
+								</div>
+								<div class="layui-form-mid layui-word-aux select-text">至</div>
+								<div class="layui-input-inline select-date">
+									<input class="layui-input" placeholder="截止日期" onclick="layui.laydate({elem: this,  max: laydate.now()})">
+									<i></i>
+								</div>
+							</div>
+							<div class="layui-form-item search-submit">
+								<div class="layui-input-block">
+									<button id="searchRrsult2" type="button" class="layui-btn btn-submit">检索</button>
+									<button type="reset" class="layui-btn btn-cancel">取消</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
 				<div class="layui-clear">
 					<div class="nav-list left">
 						<div class="nav-title border">
@@ -514,7 +616,7 @@
 				$('.header .entry').bind('click',function(){
 					$('.mask-login').fadeIn();
 				})
-				//检索操作
+				//检索操作 --头部
 				$('.header .hight-search').bind('click',function(){
 					$('.mask-search').show();
 				});
@@ -552,6 +654,37 @@
 				//search表单提交监听
 				$('#searchRrsult').bind('click',function(){
 					
+				});
+				//检索操作 -- 正文
+				$('.search-hight .continu-add').bind('click',function(e){
+					
+					if($($('.search-hight .slect-hide')[0]).css('display')=='none'){
+						$($('.search-hight .slect-hide')[0]).css('display','block');
+						return;
+					}
+					if($($('.search-hight .slect-hide')[1]).css('display')=='none'){
+						$($('.search-hight .slect-hide')[1]).css('display','block');
+						return;
+					}
+					
+				});
+				$('.search-hight .layui-form-item .dec-icon').bind('click',function(e){
+					var elemId = '#add2-select' + $(e.target).attr('data-id');					
+					$(elemId).hide();
+				});
+				var dateType2 = false;
+				$('#selet-date2').bind('click',function(e){
+					if(dateType2){
+						dateType2 = false;
+						$(e.target).removeClass('selected-icon').addClass('select-icon');
+					}else{
+						dateType2 = true;
+						$(e.target).removeClass('select-icon').addClass('selected-icon');
+					}
+				});
+				$('.search-hight .search-term .btn-cancel').bind('click',function (){
+					$('#add2-select1').hide();
+					$('#add2-select2').hide();
 				});
 				//左侧导航栏折叠/展开
 				$('.result-list .title-icon').bind('click',function(e){

@@ -258,12 +258,16 @@
 								    <li>论文</li>
 								    <li>新闻</li>
 							    </ul>
-							    <div class="yygk-sort">
-							    	排序：<a>出版时间<i></i></a><a>更新时间<i></i></a>
+							    <div class="result-search">
+							    	<input type="text" name=""  placeholder="请输入检索内容" autocomplete="off" class="layui-input left" />
+									<span class="search left">检索</span>
 							    </div>
 							    
 							    <div class="layui-tab-content" >
 								    <div class="layui-tab-item layui-show">
+								    	<div class="sort">
+									    	排序：<a>出版时间<i></i></a><a>更新时间<i></i></a>
+									    </div>
 								    	<ul>
 								    		<li>
 								    			<a class="title yyzcyj-title">
@@ -412,6 +416,9 @@
 								    	</ul>	
 								    </div>
 								    <div class="layui-tab-item">
+								    	<div class="sort">
+									    	排序：<a>出版时间<i></i></a><a>更新时间<i></i></a>
+									    </div>
 								    	<ul>
 								    		<li>
 								    			<a class="title yyzcyj-title">
@@ -560,6 +567,9 @@
 								    	</ul>	
 								    </div>
 								    <div class="layui-tab-item">
+								    	<div class="sort">
+									    	排序：<a>出版时间<i></i></a><a>更新时间<i></i></a>
+									    </div>
 								    	<ul>
 								    		<li>
 								    			<a class="title yyzcyj-title">
@@ -708,6 +718,9 @@
 								    	</ul>
 								    </div>
 								    <div class="layui-tab-item">
+								    	<div class="sort">
+									    	排序：<a>出版时间<i></i></a><a>更新时间<i></i></a>
+									    </div>
 								    	<ul>
 								    		<li>
 								    			<a class="title yyzcyj-title">
@@ -960,7 +973,7 @@
 				}
 			});
 			//排序
-			$('.yygk-sort a').bind('click',function(e){
+			$('.sort a').bind('click',function(e){
 				var elem = e.target;
 				var children = $(elem).children('i');
 				if( $(children).hasClass('up') ){
